@@ -1,0 +1,56 @@
+<!--aula 568 (id e classes),  -->
+<!-- insira "!" e clique para gerar a estrutura automaticamente-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--importante para ajustar ao tamanho da tela de dispositivos móveis-->
+    <meta charset="utf-8"> <!-- codificação de bytes/caracteres utilizada-->
+    <title>Meu HTML</title>
+    <style>
+
+        /*tag normal prioridade 3*/
+
+        b{
+            color: rgb(25, 165, 118);
+        }
+
+        /*class prioridade 2*/
+
+        #cabecalho-um {
+            color: rgb(13, 82, 209)
+        }
+        #cabecalho-dois {
+            color: rgb(3, 46, 3)
+        }
+
+        /*id prioridade 1*/
+        .borda-esquerda{
+           border-left-width: 2em  ;
+           border-left-style: solid;
+           border-left-color: transparent;
+        }
+        .fundo-vermelho {
+            background-color: rgb(243, 95, 95);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- id deve ser único-->
+    <!-- class pode ter várias-->
+    <h1 id="cabecalho-um" class="fundo-vermelho borda-esquerda">
+        Minha página HTML!
+    </h1>
+    <h1 id="cabecalho-dois" class="fundo-vermelho">
+        Minha página HTML!
+    </h1>
+    <p>Eliel Martins da <b>Trindade</b></p>
+    <p>Eliel Martins da <b>Trindade</b></p>
+    <p>Eliel Martins da <b>Trindade</b></p>
+</body>
+
+</html>

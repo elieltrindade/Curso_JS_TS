@@ -1,0 +1,341 @@
+<!--569 (cabecalhos), 570 (tags), 571 (listas), 572 (Semântica e estruturas)-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tags {
+            font-weight: 600;
+            font-size: 20px;
+            color: blueviolet;
+        }
+
+        img {
+            width: 150px;
+        }
+
+        .destaque {
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+
+<!-- "h1, h2..."Uso semântico, 
+ permite que os navegadores, 
+ leitores de tela e outros dispositivos possam interpretar
+ corretamente o conteúdo de uma página-->
+
+<body>
+    <section>
+        <header>
+            <h2 class="tags"><code>&lt;h1&gt;</code></h2>
+            <h1>Elementos HTML Cabeçalho h1</h1>
+        </header>
+            
+        <article>
+            <h2 class="tags"><code>&lt;h2&gt;</code></h2>
+            <h2>Cabeçalho h2</h2>
+            <h2 class="tags"><code>&lt;h3&gt;</code></h2>
+            <h3>Cabeçalho h3</h3>
+            <h2 class="tags"><code>&lt;h4&gt;</code></h2>
+            <h4>Cabeçalho h4</h4>
+            <h2 class="tags"><code>&lt;h5&gt;</code></h2>
+            <h5>Cabeçalho h5</h5>
+            <h2 class="tags"><code>&lt;h6&gt;</code></h2>
+            <h6>Cabeçalho h6</h6>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;b&gt;</code> (Bold)</h2>
+            <p>
+                Função: <b>usada para aplicar negrito ao texto.</b> <br>
+                Uso semântico: Não adiciona significado adicional ao conteúdo, é puramente para estilização visual.
+            </p>
+        </article>
+        <article>
+            <h2 class="tags"><code>&lt;strong&gt;</code> (Strong)</h2>
+            <p>
+                Função: <strong>usada para destacar um texto, geralmente aplicando negrito. </strong> <br>
+                Uso semântico: Adiciona importância ao conteúdo, indicando que o texto é mais importante ou merece
+                atenção
+                especial.
+            </p>
+        </article>
+        <article>
+            <h2 class="tags"><code>&lt;i&gt;</code> (Italic)</h2>
+            <p>
+                Função: <i> usada para aplicar itálico ao texto.</i><br>
+                Uso semântico: Não adiciona significado adicional ao conteúdo, é puramente para estilização visual.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;em&gt;</code> (Emphasis)</h2>
+            <p>
+                Função: <em> usada para enfatizar um texto, geralmente aplicando itálico. </em><br>
+                Uso semântico: Adiciona ênfase ao conteúdo, indicando que o texto é importante ou merece atenção
+                especial.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;a&gt;</code> (Anchor)</h2>
+            <p>
+                Função: usada para criar um hyperlink, ou seja, um link para outra página ou recurso.<br>
+                Uso semântico: Indica a intenção de que o texto ou elemento seja clicável e leve o usuário para outro
+                local.<br>
+                Atributo obrigatório: O atributo href especifica o URL de destino para onde o link deve direcionar o
+                usuário.<br><br>
+                <a href="https://www.google.com/search?q=google" target="_blank">Isto é um Link para o site do
+                    Google</a>
+                <br><br>
+                O atributo <strong>target</strong> especifica onde o navegador deve abrir o link. <br>
+                Valores Comuns do Atributo target: <br>
+                <br>
+                _self<br>
+                * Abre o link na mesma janela ou aba. padrão.<br><br>
+
+                _blank:<br>
+                * Abre o link em uma nova aba ou nova janela.<br><br>
+
+                _parent:<br>
+                * Abre o link no frame pai (usado em páginas com frames).<br><br>
+
+                _top:<br>
+                * Abre o link no frame mais externo (quebra todos os frames e abre na janela completa).<br><br>
+
+                nomeDoFrame:<br>
+                * Abre o link em um frame específico.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;img src=""&gt;</code> (Image)</h2>
+            <img src="https://i.uai.com.br/RUnPG7WNuaypUWI6M64WSsjg-Ik=/750x0/imgsapp2.uai.com.br/app/noticia_133890394703/2024/04/09/339149/cinebiografia-sobre-silvio-santos-com-rodrigo-faro-vira-alvo-de-piadas-na-web_1_22790.jpg"
+                alt="Rodrigo Faro interpreta Silvio Santos"><br>
+            <p>
+                Função: usada para incluir uma imagem em uma página HTML.<br>
+                Uso semântico: Indica que uma imagem deve ser exibida na posição onde a tag é colocada.<br><br>
+                Atributo obrigatório: O atributo <strong>src</strong> especifica o caminho ou URL da imagem.<br>
+                <strong>alt</strong> é o texto alternativo, para descrever a imagem.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;del&gt;</code> (Deleted Text)</h2>
+            <p>
+                Função: <del>usada para indicar que um texto foi excluído ou removido.</del> <br>
+                Uso semântico: Destaca texto que foi removido ou excluído. Frequentemente renderizado com um traço no
+                meio
+                do
+                texto.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;s&gt;</code> (Strikethrough)</h2>
+            <p>
+                Função: <s>usada para aplicar um traço no meio do texto.</s><br>
+                Uso semântico: Indica que o texto é incorreto, irrelevante, ou que não é mais válido. Não adiciona
+                significado
+                específico ao conteúdo além de mostrar que está "riscado".
+
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;u&gt;</code> (Underline)</h2>
+            <p>
+                Função: <ins>usada para sublinhar o texto.</ins> <br>
+                Uso semântico: No HTML5, indica que o texto é estilisticamente diferente do texto normal, sem
+                necessariamente
+                adicionar ênfase. Por exemplo, pode ser usado para nomes próprios em um texto chinês, ou para
+                marcar
+                erros de ortografia.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;ins&gt;</code> (Inserted Text)</h2>
+            <p>
+                Função: <ins>usada para indicar que um texto foi inserido ou adicionado.</ins><br>
+                Uso semântico: Destaca texto que foi recentemente inserido ou adicionado. Frequentemente renderizado
+                com
+                sublinhado.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;small&gt;</code> (Small)</h2>
+            <p>
+                Função: <small>usada para indicar que o texto deve ser exibido em um tamanho de fonte menor que o
+                    texto
+                    circundante.</small><br>
+                Uso semântico: Indica que o texto é de menor importância, tamanho ou relevância em relação ao texto
+                circundante.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;sup&gt;</code> (Superscript)</h2>
+            <p>
+                Função: <sup> usada para colocar o texto em um formato de sobrescrito, posicionando-o acima da linha
+                    de
+                    base
+                    normal.</sup>
+                <br>
+                Uso semântico: Indica que o texto é um expoente, nota de rodapé, ou outra informação relacionada que
+                deve
+                ser
+                exibida acima do texto circundante.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;sub&gt;</code> (Subscript)</h2>
+            <p>
+                Função:<sub> é usada para colocar o texto em um formato de subscrito, posicionando-o abaixo da linha
+                    de
+                    base
+                    normal.</sub><br>
+                Uso semântico: Indica que o texto é um índice, nota de rodapé, ou outra informação relacionada que
+                deve
+                ser
+                exibida abaixo do texto circundante.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;q&gt;</code> (Quote)</h2>
+            <p>
+                Função:<q>Define uma citação curta.</q><br>
+                Uso semântico: Envolve texto que representa uma citação curta de outra fonte, frequentemente
+                renderizada
+                entre
+                aspas.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;blockquote&gt;</code> (Block Quote)</h2>
+            Função:
+            <blockquote>
+                uma citação em bloco. <br>
+            </blockquote>
+            Uso semântico: Envolve texto que representa uma citação longa de outra fonte, frequentemente renderizada
+            com
+            recuo.<br>
+            Observação: não é possível inserir dentro da tag <code>&lt;p&gt;</code>, mas o inverso é aceito.
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;code&gt;</code> (Code)</h2>
+            <p>
+                Função: <code>Define um trecho de código. </code><br>
+                Uso semântico: Envolve texto que representa um fragmento de código de programação, renderizado com
+                uma
+                fonte
+                monoespaçada.<br>
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;pre&gt;</code> (Preformatted Text)</h2>
+            Função:
+            <pre>
+                Exibe texto
+                pré-formatado.
+            </pre>
+            Uso semântico: Preserva o formato do texto, incluindo espaços em branco e quebras de linha, utilizando
+            uma
+            fonte
+            monoespaçada.
+            Observação: não é possível inserir dentro da tag <code>&lt;p&gt;</code>.
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;span&gt;</code></h2>
+            <p>
+                Função: <span class="destaque">Contêiner genérico em linha para estilização ou manipulação. Para
+                    conteúdo
+                    <strong>in-line</strong> </span><br>
+                Uso semântico: Não adiciona significado semântico, usado principalmente para aplicar estilos ou
+                scripts
+                a
+                uma parte específica do texto.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;div&gt;</code></h2>
+            Função:
+            <div class="destaque">
+                Contêiner genérico em bloco para estruturação, estilização ou manipulação. Para conteúdo em
+                <strong>bloco</strong>
+            </div>
+            Uso semântico: Não adiciona significado semântico, usado principalmente para agrupar conteúdo e aplicar
+            estilos
+            ou scripts.
+            <br>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;nav&gt;</code></h2>
+            Função:
+            <nav>
+                usada para definir uma seção de navegação em uma página, que contém links para outras partes do site
+                ou
+                da página. <br>
+                Uso semântico: Indica que o conteúdo dentro da tag é um conjunto de links de navegação, como menus,
+                índices
+                ou
+                barras de navegação.
+            </nav>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;ol&gt;</code> (Ordered List)</h2>
+            <p>
+                Função: Cria uma lista ordenada (numerada). <br>
+                Uso semântico: Itens têm uma ordem específica.
+            </p>
+            <ol>
+                <li>primeiro item</li>
+                <li>segundo item</li>
+                <li>terceiro item</li>
+            </ol>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;li&gt;</code> (List Item)</h2>
+            <p>
+                Função: Define um item dentro de uma lista.<br>
+                Uso semântico: Representa um item dentro de uma lista ordenada ou não ordenada.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="tags"><code>&lt;ul&gt;</code> (Unordered List)</h2>
+            <p>
+                Função: Cria uma lista não ordenada (com pontos).<br>
+                Uso semântico: Itens não têm uma ordem específica.
+            </p>
+            <ul>
+                <li>primeiro item</li>
+                <li>segundo item</li>
+                <li>terceiro item</li>
+            </ul>
+        </article>
+        <footer>
+            <div class="tags">Para conhecer mais Tags <a
+                    href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element" target="blank">clique aqui</a>.
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>
