@@ -1,0 +1,100 @@
+<!--576-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas html</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            /*Uni as bordas*/
+            width: 100%;
+        }
+
+        table td,
+        table th {
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-align: left;
+            /*posicao elementos das tabela. right, center, left*/
+        }
+
+        table caption {
+            caption-side: bottom;
+            /*posicao da descricao, top ou bottom*/
+            text-align: center;
+            /*posicao da descricao, right, center, left*/
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 5px 0;
+        }
+
+        tfoot {
+            background-color: #ddd;
+        }
+
+        .responsive-table{
+            max-width: 100%;
+            overflow-x: auto;    /*recurso responivo - mostrar barra de rolagem para não alterar o design da tabela em determindado tamanho*/ 
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <p>Tabelas</p>
+    <div class="responsive-table">
+        <table> <!--Criar tabela -->
+            <caption> Preço Sacolão</caption> <!--Descricao da tabela-->
+            <thead> <!--cabecalho da tabela-->
+                <tr> <!--nova linha-->
+                    <th colspan="3">Tabela de preços </th> <!--coluna cabecalho --> <!--colspan ocupar colunas-->
+                </tr>
+                <tr> <!--rowspan ocupar mais linhas-->
+                    <th>Produto </th>
+                    <th>Preço </th>
+                    <th>Peso </th>
+                </tr>
+            </thead>
+            <tbody> <!--corpo da tabela-->
+                <tr>
+                    <td>Batata</td> <!--coluna corpo -->
+                    <td>2,50R$</td>
+                    <td>kg</td>
+                </tr>
+                <tr>
+                    <td>Maça</td>
+                    <td>8,99R$</td>
+                    <td>Kg</td>
+                </tr>
+                <tr>
+                    <td>Repolho</td>
+                    <td>5,99R$</td>
+                    <td>Unidade</td>
+                </tr>
+                <tr>
+                    <td>Melancia</td>
+                    <td>15,99R$</td>
+                    <td>Unidade</td>
+                </tr>
+            </tbody>
+            <tfoot> <!--rodapé da tabela-->
+                <tr>
+                    <td> TOTAL</td>
+                    <td> R$</td>
+                </tr>
+        </table>
+    </div>
+
+    </tfoot>
+</body>
+
+</html>

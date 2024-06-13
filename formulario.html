@@ -1,0 +1,186 @@
+<!--577 (estrutura), 578 (label, tipos: texto, radio, checkbox), 579 (date, datetime, time, cor, email, number,  file)
+580 (password, range, search, select, textarea)-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários e inputs</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        label {
+            cursor: pointer;
+            /*troca o cursor para mostrar que é clicável*/
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>Saiba mais sobre Formulários</p>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Forms/How_to_structure_a_web_form" target="blank">Como
+        estruturar um formulário HTML</a><br>
+    <a href="https://www.w3schools.com/html/html_form_input_types.asp" target="_blank">HTML Input Types</a><br>
+
+    <!--estritamente proibido aninhar um formulario dentro de outro formulário, isso pode causar problemas com o navegador-->
+    <!--action > para onde vai os dados obtidos no formulario-->
+    <!--method="get" > campos do formulario serao atrelados comparametros na URL -->
+    <!--target="blank" > para enviar a outra tela-->
+    <!--autocomplete="on/off" > para autompletar dados que ja foram inseridos-->
+    <form action="#" method="get" target="_blank" autocomplete="off">
+        <section>
+            <h1>Meu Site</h1>
+            <fieldset>
+                <legend>Preencha o formulário</legend>
+                <p>
+                    <label for="text">Text:</label>
+                    <!--label > quando clicar na descriçao é direcionado para o campo-->
+
+
+                    <input type="text" id="text" name="text" placeholder="Insira seu nome" required>
+                    <!--(chave) name > seria o nome do input, chave utilizado no back-and-->
+                    <!--(valor) value > definir valor para o input-->
+                    <!--readonly > interage com o input, mas não digita-->
+                    <!--required > Campo obrigatório-->
+                </p>
+
+                <p>
+                    <label> Checkbox
+                        <input type="checkbox" id="checkbox" name="checkbox" value="clicou">
+                        <!--(chave) name > seria o nome do input, chave utilizado no back-and-->
+                        <!--(valor) value > definir valor para o input-->
+                        <!--readonly > interage com o input, mas não digita-->
+                    </label>
+                </p>
+
+                <p>
+                    Radio:<br>
+                    <label>
+                        Radio 1
+                        <input type="radio" name="genero" id="radio1" value="radio1">
+                    </label>
+                    <label>
+                        Radio 2
+                        <input type="radio" name="genero" id="radio2" value="radio2">
+                    </label>
+
+                    <label>
+                        Radio 3
+                        <input type="radio" name="genero" id="radio3" value="radio3">
+                    </label>
+                </p>
+
+                <p>
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date">
+                </p>
+
+                <p>
+                    <label for="datetime">DateTime</label>
+                    <input type="datetime-local" id="datetime" name="datetime">
+                </p>
+
+                <p>
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time">
+                </p>
+
+                <p>
+                    <label for="color">Color:</label>
+                    <input type="color" id="color" name="color">
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="ex.: email@email.com">
+                </p>
+
+                <p>
+                    <label for="number">Number:</label>
+                    <input type="number" id="number" name="number" placeholder="Digite um número" min="18" max="115"
+                        step="5">
+                    <!--min > minimo aceitavel-->
+                    <!--max > maximo aceitavel-->
+                    <!--step > ira pular de 5 em 5 a cada clique nas flechas ao lado-->
+                </p>
+
+                <p>
+                    <label for="file">File:</label>
+                    <input type="file" id="file" name="file" accept=".png,.svg,image/*">
+                    <!--accept > o tipo de arquivo aceita, não é garantido-->
+                </p>
+
+                <p>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha">
+                    <!--min > minimo aceitavel-->
+                    <!--max > maximo aceitavel-->
+                    <!--step > ira pular de 5 em 5 a cada clique nas flechas ao lado-->
+                </p>
+
+                <p>
+                    <label for="range">Range:</label>
+                    <input type="range" id="range" name="range" min="0" max="10" step="2">
+                    <!--min > minimo aceitavel-->
+                    <!--max > maximo aceitavel-->
+                    <!--step > ira pular de 5 em 5 a cada clique nas flechas ao lado-->
+                </p>
+
+                <p>
+                    <label for="url">url:</label>
+                    <input type="url" id="url" name="url" placeholder="URL">
+                </p>
+
+                <p>
+                    <label for="search">search:</label>
+                    <input type="search" id="search" name="search" placeholder="search">
+                </p>
+
+                <p>
+                    <label for="select">Select:</label>
+                    <select id="select" name="select" multiple>
+                        <!--multiplie > possibilita selecionar varias opcoes com shift ou ctrl-->
+                        <optgroup label="Grupo 1">
+                            <option value="qualquer1" label="Label 1">
+                            <option value="qualquer2" label="Label 2">
+                            <option value="qualquer3" label="Label 3" disabled>
+                                <!--disabled > impossibilita o uso-->
+                            <option value="qualquer4" label="Label 4" selected>
+                                <!--selected: opcao previamente selecioada-->
+                        </optgroup>
+                        <optgroup label="Grupo 2">
+                            <option value="qualquer5" label="Label 5" disabled>
+                            <option value="qualquer6" label="Label 6">
+                            <option value="qualquer7" label="Label 7">
+                            <option value="qualquer8" label="Label 8">
+                        </optgroup>
+                    </select>
+                </p>
+
+                <p>
+                    <button type="reset">Reset</button>
+                    <button type="submit">Enviar</button>
+                </p>
+
+                <p>
+                    <label for="textarea">textarea</label>
+                    <textarea name="textarea" id="textarea" rows="8" cols="15"></textarea>
+                    <!--rows > linhas 
+                        cols > colunas (daria uma letra por coluna)-->
+                </p>
+            </fieldset>
+        </section>
+    </form>
+
+
+
+
+</body>
+
+</html>

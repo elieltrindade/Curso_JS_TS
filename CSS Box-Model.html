@@ -1,0 +1,77 @@
+<!--574 (box-model)-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .section-one {
+            height: 220px;
+            width: 230px;
+            border: 5px solid black;
+            padding: 15px;
+            margin: 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+                url(https://images.pexels.com/photos/14763509/pexels-photo-14763509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .section-two {
+            height: 220px;
+            width: 230px;
+            border-bottom-width: 10px;
+            border-bottom-color: solid black;
+            padding: 15px;
+            margin: 20px;
+            background: cyan;
+        }
+
+        .section-tree {
+            height: 220px;
+            width: 230px;
+            border-width: 10px;
+            border-style: solid;
+            border-bottom-color: black;
+            border-top-color: blue;
+            border-left-color: red;
+            border-right-color: green;
+            padding: 20px 15px 10px 5px;
+            margin: 20px;
+            background: cyan;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="section-one">
+        <strong>Padding:</strong> Espaçamento dentro da box (infla), isto da distância entre a borda. Para não aumentar
+        o tamanho da box definir width e height, caso não esteja definida a box irá ajustar automaticamente.<br>
+    </section>
+    <section class="section-two">
+        <strong>Border:</strong> acrescenta (aumenta) ao elemento.<br>Para aparecer a borda precisamos: color; style; e
+        width.
+    </section>
+    <section class="section-tree">
+        <strong> Margin:</strong> empurra (separa) o conteúdo dos outros conteúdos. Não tem cor. As margens dos
+        elementos não se somam, utiliza a margem maior.
+    </section>
+    <footer>
+        <div class="tags">Para conhecer mais sobre Box-Model <a
+                href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model" target="blank">clique aqui</a>.
+        </div>
+    </footer>
+</body>
+
+</html>
