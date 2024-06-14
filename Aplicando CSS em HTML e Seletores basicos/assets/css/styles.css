@@ -1,0 +1,63 @@
+/*583 (seletores basicos) */
+
+/*seleciona todos os elementos*/
+* {
+    margin: 0;
+    border: 0;
+}
+
+/*selecionar por tag*/
+p {
+    color: blanchedalmond;
+}
+
+/*selecionar por descente*/
+body div {
+    margin: 10px;
+}
+
+/*selecionar varios*/
+h1,
+p {
+    font-family: sans-serif;
+}
+
+
+/*selecionador de classe*/
+.importado {
+    height: 100px;
+    width: 150px;
+    background: rgb(131, 54, 233);
+}
+
+/*Varias classes com nome igual*/
+.texto {
+    font-size: 15px;
+}
+
+/*selecionador por descente de classe*/
+.main-content .teste1 {
+    color: blue;
+}
+
+/*selecionador por descente de classe especificando con tag*/
+.main-content h3.teste1 {
+    color: green;
+}
+
+/*selecao de dependente tem espaco entre os dois*/
+/*selecao sem espaco (colada), tem que especificado a classe*/
+.pai .filha {
+    color: cyan;
+}
+
+/*selecao direta (não deu certo, algum problema com descendencia*/
+.pai>.filha {
+    text-decoration: underline;
+}
+
+/*selecionar id*/
+#titulo {
+    font-style: italic;
+    text-decoration: underline;
+}
