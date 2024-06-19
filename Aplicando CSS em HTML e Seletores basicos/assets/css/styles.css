@@ -1,4 +1,13 @@
-/*583 (seletores basicos) */
+/*
+583 seletores basicos
+584 Adjacent sibiling selector, General sibling selector, selecionador por atributo
+585 selecionador por atributos
+586 pseudo-classes active, focus, hover, required, disabled, visited
+587 pseudo-classe :not()
+588 pseudo-classe :nth-child()
+589 pseudo-elements ::placeholder, ::selection, ::first-letter, ::before, ::after
+
+ */
 
 /*seleciona todos os elementos*/
 * {
@@ -21,7 +30,6 @@ h1,
 p {
     font-family: sans-serif;
 }
-
 
 /*selecionador de classe*/
 .importado {
@@ -56,8 +64,159 @@ p {
     text-decoration: underline;
 }
 
+/*Adjacent sibiling selector > seleciona todo o elemento que tiver depois do elemento adjacente*/
+.outro_pai h1+p{
+    
+    color: red;
+}
+
+/*general sibling selector > seleciona todos os elementos que vem depois de um determinado elemento*/
+.mais_um_pai h1~p{  
+    color: red;
+}
+
+/*selecionar por atributo*/
+[meu-atributo]{
+    font-style: italic;
+    color:rgb(131, 54, 233);
+}
+
+/*selecionar por atributo com valores "~" contém pelo menos um valor*/
+[meu-atributo~=valor1]{
+    color: yellow;
+}
+
+/*selecionar por atributo com valores "|" tem que estar no começo e seguido de um traço*/
+[meu-atributo|="qualquercoisa"]{
+    color: pink;
+}
+
+/*selecionar por atributo com valores "^" começa com...*/
+[meu-atributo^="esta"]{
+    color: rgb(18, 102, 50);
+}
+
+/*selecionar por atributo com valores "~" termina com...*/
+[meu-atributo$="mina"]{
+    color: rgb(250, 0, 208);
+}
+
+/*selecionar por atributo com valores "*" contem...*/
+[meu-atributo*="contem"]{
+    color: black;
+    text-decoration: underline;
+}
+
 /*selecionar id*/
 #titulo {
     font-style: italic;
     text-decoration: underline;
+}
+
+/*Seletores de Pseudo-classes*/
+#titulo{
+    transition: all 300ms ease-in-out;
+}
+
+#titulo:hover{
+    background-color: aquamarine;
+}
+
+a {
+    color:darkorange;
+}
+
+/*link visitado*/
+a:link{
+    color: deeppink;    
+}
+/*link não visitado*/
+a:visited{
+    color:darkgreen;
+}
+
+a:hover{
+    background-color: aquamarine;
+    color: black;
+    text-decoration: none;
+}
+
+/*elemento ativo clicado*/
+a:active{
+    color:blueviolet;
+}
+
+input{
+    border:#000 solid 1px;
+}
+
+input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 1px solid black;
+}
+
+input:disabled {
+    background-color: rebeccapurple;
+    cursor: not-allowed;
+}
+
+input:required{
+    box-shadow: 0 0 10px red;    
+}
+
+input:checked + p {
+    background-color: yellow;
+    color: black;
+}
+
+input:not(:checked) + p {
+    background-color: blue;
+    color: white;
+}
+
+/*parenteses indica o indice desejado*/
+ul li:nth-child(5) {
+    color: red;
+}
+
+/*pares*/
+ul li:nth-child(odd) {
+    background-color: grey;
+}
+
+/*impares*/
+ul li:nth-child(even) {
+    background-color: gainsboro;
+}
+
+/*Pseudo-Elements*/
+/*depois de um conteudo*/
+ul li::after{
+    content: ' -';
+    color:cyan;
+}
+
+/*antes de um conteudo*/
+ul li::before{
+    content: '* ';
+    color:rgb(250, 0, 208);
+}
+
+/*primeira letra do paragrafo*/
+p::first-letter{
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
+
+/*seleção de conteudo*/
+p::selection {
+    background-color: black;
+    color: white;
+}
+
+/*alteração de placeholder*/
+.form-field::placeholder{
+    color: white;
 }
