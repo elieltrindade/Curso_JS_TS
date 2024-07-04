@@ -6,7 +6,7 @@
 587 pseudo-classe :not()
 588 pseudo-classe :nth-child()
 589 pseudo-elements ::placeholder, ::selection, ::first-letter, ::before, ::after
-
+590 Especificidade
  */
 
 /*seleciona todos os elementos*/
@@ -220,3 +220,4 @@ p::selection {
 .form-field::placeholder{
     color: white;
 }
+

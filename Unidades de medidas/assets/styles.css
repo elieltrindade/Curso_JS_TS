@@ -1,0 +1,39 @@
+/*
+595. Unidades de medidas no CSS (px, rem, em, vw, vh, %)
+
+*/
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth; /* Ao clicar em um link de âncoras move lentamente a página */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.pai{
+    width:  50rem; /*500px*/
+    height: 100vh;  /*Relativo a 100% da altura do viewport (área visível em dispositivo do usuário onde se deve visualizar o site)*/
+    background: yellow;    
+}
+
+.pai > div {
+    width: 50%;
+    height: 50rem;
+    background: blue;
+}
+
+p {
+    font-size: 1.6rem;
+    text-transform:;
+}
+
+.color-one {
+    background: turquoise;
+}
+
+.color-two {
+    background: violet;
+}

@@ -1,0 +1,123 @@
+/*
+592. Propriedade específicas do Box-Model (largura, altura, padding, border e margin)
+593. Float e Display (Block, Inline-Block e Inline)
+598. Media queries e breakpoints
+599. Uma breve junção de tudo aprendido até aqui
+*/
+
+* {     /*seletor geral*/
+    margin: 0;      
+    box-sizing: border-box;     /*--bordas e enchimento sejam calculados no valor total do elemento especificado --*/
+    padding: 0;     /*preenchimento interno do elemento*/
+}
+
+html {
+    scroll-behavior: smooth; /* para mover a tela de forma suave*/
+}
+
+body {
+    font-family: sans-serif;
+}
+
+
+.menu{
+    width: 100%;
+    position: fixed;        /*sobrepoe os outros elementos*/
+    background-color: #000000e0;
+}
+
+
+.menu ul{
+   list-style: none;        /*retira o estilo (marcadores) da lista */
+   display: block;
+   max-width: 1200px;
+   padding: 0 30px;
+   margin: 0 auto;     /*deixa o elemento centralizado*/
+}
+
+.menu li{
+    float: left;
+ }
+
+ .menu li a{
+    display: block;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+ }
+
+ .menu li a:hover{      /*efeito ao passar o cursor por cima*/
+    background-color: #333;
+    transition: all 300ms ease-in-out;     /*efeito de transição*/
+ }
+
+
+.grid {
+    max-width: 1200px;
+    padding: 15px;
+    margin: 0 auto;     /*deixa o elemento centralizado*/
+    padding-top: 73px;      /*espaçamento do topo */
+}
+
+.grid::after{
+/*
+conteudo de fora do grid não vai ficar ao lado, o grid automaticamente joga o proximo conteudo para outra linha
+*/
+    content: '';
+    display: block;
+    clear: both;
+    /*
+"clear" pode ser utilizado nas propriedades de .grid .col com os valores
+- left, caso queira limpar a esquerda;
+- right, caso queira deixar limpo a direita;
+- both, nos dois lados.
+    */
+}
+
+.grid .col {    
+    height: 300px;
+    float: left;
+    padding: 15px;
+}
+
+.grid .col-content{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+/*Media queries e breakpoints, sobrescrevem outras regras, específicando o tamanho da tela*/
+@media (max-width: 568px) {
+    .grid .col {
+        width: 100%;
+    }
+}
+
+@media (min-width: 569px) and (max-width: 1200px){
+    .grid .col {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid .col {
+        width: 25%;
+    }
+}
+
+.full-page {
+    max-width: 100%;
+    padding-top: 40px;      /*espaçamento do topo */
+    height: 100vh;
+    background-color: turquoise;
+}
+
+.full-page-content {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 30px;
+}
+
+
+
+
